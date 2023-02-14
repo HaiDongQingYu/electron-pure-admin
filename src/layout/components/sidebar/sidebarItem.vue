@@ -143,7 +143,7 @@ function resolvePath(routePath) {
   if (httpReg.test(routePath) || httpReg.test(props.basePath)) {
     return routePath || props.basePath;
   } else {
-    return path.resolve(props.basePath, routePath);
+    return path.posix.resolve(props.basePath, routePath);
   }
 }
 </script>
